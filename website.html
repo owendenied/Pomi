@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomi</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/timer-container.css">
+    <link rel="stylesheet" href="styles/information.css">
+    <link rel="stylesheet" href="styles/faq.css">
+    <link rel="stylesheet" href="styles/to-do.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/notification-modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pomodoro-container">
+        <div class="pomodoro-container-text">
+            <p class="pomodoro-header">Pomodoro</p>
+            <p id="timer" class="pomodoro-time">25:00</p>
+            <button id="startButton" class="start">Start</button>
+        </div>
+    </div>
+
+    <div class="options">
+        <button id="tutorial" class="question-mark">&#63;</button>
+        <button id="gear-button" class="settings">&#9881;</button>
+        <button id="note" class="music">&#9834;</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Pomi Timer - Features</h1>
+            <div class="feature">
+                <h2 class="description">Description of Pomi Timer (a Pomodoro timer)</h2>
+                <p>The Pomi Timer is a productivity tool based on the Pomodoro Technique, which helps users manage their time effectively by breaking work into intervals (usually 25 minutes) separated by short breaks.</p>
+            </div>
+            <div class="feature">
+                <h2>How to Use the Timer</h2>
+                <p>To use the Pomi Timer:</p>
+                <ul>
+                    <li>Input the desired study duration (in minutes) using the designated field.</li>
+                    <li>Input the desired break duration (in minutes) using the designated field.</li>
+                    <li>Click the "Start" button to begin the timer.</li>
+                    <li>During the study session, work diligently on your task.</li>
+                    <li>When the timer ends, take a short break.</li>
+                    <li>Repeat the process for subsequent study sessions and breaks.</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h2>Adding Tasks on To-Do List</h2>
+                <p>The Pomi Timer also includes a to-do list feature to help users organize their tasks:</p>
+                <ul>
+                    <li>Type your task in the input field labeled "Add a task".</li>
+                    <li>Click the "Add Task" button to add the task to your to-do list.</li>
+                    <li>Your task will be displayed in the to-do list below.</li>
+                    <li>You can remove the task once you've completed it.</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h2>Accessing the Spotify Playlist Widget</h2>
+                <p>Additionally, the Pomi Timer provides access to a Spotify playlist widget to enhance your productivity:</p>
+                <ul>
+                    <li>The Spotify playlist widget is embedded in the webpage.</li>
+                    <li>You can listen to the lofi music provided while using the Pomi Timer.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-settings">&times;</span>
+            <h1>Settings</h1>
+            <div class="feature">
+                <h2>Set Pomodoro Timer Duration</h2>
+                <div class="timer-settings">
+                    <div>
+                        <label for="workDuration">Work Duration (minutes):</label>
+                        <input type="number" id="workDuration" min="1" value="25">
+                    </div>
+                    <div>
+                        <label for="breakDuration">Break Duration (minutes):</label>
+                        <input type="number" id="breakDuration" min="1" value="5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationModal" class="notification-modal">
+        <div class="notification-modal-content">
+            <span class="notification-close">&times;</span>
+            <h1>Time's Up!</h1>
+            <img src="styles/images/rizzcat.jpg">
+        </div>
+    </div>
+
+    <div class="do-button">
+        <div class="container">
+            <div class="todo-app">
+                <h2>To-Do List <img src="styles/images/icon.png"></h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add your text">
+                    <button onclick="addTask()" class="todo-add">Add</button>
+                </div>
+                <ul id="list-container">
+                    <!--
+                    <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/to-do.js"></script>
+    <script src="scripts/timer.js"></script>
+    <script src="scripts/settings.js"></script>
+</body>
+</html>

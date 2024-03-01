@@ -1,0 +1,35 @@
+.question-mark,
+.settings,
+.music {
+    background: rgb(37, 30, 60);
+    border: none;
+    border-radius: 9px;
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.question-mark {
+    right: 70px;
+}
+
+.settings {
+    right: 125px;
+}
+
+.music {
+    right: 180px;
+}
+
+.question-mark:hover,
+.settings:hover,
+.music:hover {
+    background-color: #6e1af5;
+}
